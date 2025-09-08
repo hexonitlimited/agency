@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawn Care Web Design Specialist | High-Converting Websites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            primary: '#0D1117',
+                            secondary: '#1A1A1A'
+                        },
+                        accent: {
+                            green: '#10B981',
+                            amber: '#D97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        .glass-effect {
+            background: rgba(13, 17, 23, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .stat-card {
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        .testimonial-card {
+            flex: 0 0 calc(100% - 1rem);
+        }
+        @media (min-width: 768px) {
+            .testimonial-card {
+                flex: 0 0 calc(50% - 1rem);
+            }
+        }
+        @media (min-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 calc(33.333% - 1rem);
+            }
+        }
+    </style>
+</head>
+<body class="bg-dark-primary text-white font-sans">
+    <!-- Navigation -->
+    <nav class="glass-effect fixed w-full z-50 py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-accent-green">LawnWebDesign</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="hover:text-accent-green transition">Services</a>
+                <a href="#process" class="hover:text-accent-green transition">Process</a>
+                <a href="#portfolio" class="hover:text-accent-green transition">Portfolio</a>
+                <a href="#testimonials" class="hover:text-accent-green transition">Testimonials</a>
+                <a href="#contact" class="bg-accent-green text-dark-primary px-4 py-2 rounded-md font-medium hover:bg-opacity-90 transition">Get Quote</a>
+            </div>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center pt-16 pb-20 overflow-hidden">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-green-grass-close-up-17215-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark-primary/70 to-dark-primary"></div>
+        <div class="container mx-auto px-6 z-10">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">Websites That Help Your <span class="text-accent-green">Lawn Care Business</span> Grow</h1>
+                <p class="text-xl mt-6 text-gray-300">Beautiful, fast, and SEO-optimized websites designed to attract more clients and boost your bookings.</p>
+                <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#portfolio" class="bg-accent-green text-dark-primary px-8 py-4 rounded-md font-medium text-center hover:bg-opacity-90 transition">See My Portfolio</a>
+                    <a href="#contact" class="border border-accent-green text-accent-green px-8 py-4 rounded-md font-medium text-center hover:bg-accent-green/10 transition">Get a Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold">Web Design Services for <span class="text-accent-green">Lawn Care Pros</span></h2>
+                <p class="text-gray-400 mt-4">Specialized websites designed to showcase your services and convert visitors into customers</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                <!-- Service Card 1 -->
+                <div class="glass-effect p-8 rounded-xl stat-card">
+                    <div class="w-14 h-14 bg-accent-green/10 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-6">Landing Page Design</h3>
+                    <p class="text-gray-400 mt-3">Single-page websites focused on converting visitors into leads with clear calls-to-action.</p>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="glass-effect p-8 rounded-xl stat-card">
+                    <div class="w-14 h-14 bg-accent-green/10 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-6">5-Page Website Package</h3>
+                    <p class="text-gray-400 mt-3">Complete online presence with Home, Services, About, Gallery, and Contact pages.</p>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="glass-effect p-8 rounded-xl stat-card">
+                    <div class="w-14 h-14 bg-accent-green/10 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-6">Website SEO Optimization</h3>
+                    <p class="text-gray-400 mt-3">Optimize your site to rank higher in Google search results for lawn care services in your area.</p>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="glass-effect p-8 rounded-xl stat-card">
+                    <div class="w-14 h-14 bg-accent-green/10 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-6">Mobile-Responsive Design</h3>
+                    <p class="text-gray-400 mt-3">Websites that look perfect on all devices, especially mobile phones where most customers book.</p>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="glass-effect p-8 rounded-xl stat-card">
+                    <div class="w-14 h-14 bg-accent-green/10 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-6">Booking System Integration</h3>
+                    <p class="text-gray-400 mt-3">Allow customers to book and pay for your services directly through your website.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-dark-primary">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold">My <span class="text-accent-green">Design Process</span></h2>
+                <p class="text-gray-400 mt-4">A streamlined approach to creating websites that deliver real results for lawn care businesses</p>
+            </div>
+            
+            <div class="flex flex-col space-y-12 mt-16">
+                <!-- Step 1 -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="flex-shrink-0 w-16 h-16 bg-accent-green/10 rounded-full flex items-center justify-center text-accent-green font-bold text-2xl">1</div>
+                    <div class="mt-6 md:mt-0 md:ml-8">
+                        <h3 class="text-2xl font-semibold">Consultation</h3>
+                        <p class="text-gray-400 mt-2">We discuss your business goals, target audience, and specific requirements to create a website strategy tailored to your lawn care business.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="flex-shrink-0 w-16 h-16 bg-accent-green/10 rounded-full flex items-center justify-center text-accent-green font-bold text-2xl">2</div>
+                    <div class="mt-6 md:mt-0 md:ml-8">
+                        <h3 class="text-2xl font-semibold">Design</h3>
+                        <p class="text-gray-400 mt-2">I create mockups of your website with a focus on user experience and conversion optimization, incorporating your branding and style preferences.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="flex-shrink-0 w-16 h-16 bg-accent-green/10 rounded-full flex items-center justify-center text-accent-green font-bold text-2xl">3</div>
+                    <div class="mt-6 md:mt-0 md:ml-8">
+                        <h3 class="text-2xl font-semibold">Development</h3>
+                        <p class="text-gray-400 mt-2">Using modern technologies, I build your website with clean code, fast loading times, and mobile responsiveness as top priorities.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="flex-shrink-0 w-16 h-16 bg-accent-green/10 rounded-full flex items-center justify-center text-accent-green font-bold text-2xl">4</div>
+                    <div class="mt-6 md:mt-0 md:ml-8">
+                        <h3 class="text-2xl font-semibold">Launch</h3>
+                        <p class="text-gray-400 mt-2">After thorough testing, we deploy your website and ensure everything is working perfectly before going live to the public.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="flex-shrink-0 w-16 h-16 bg-accent-green/10 rounded-full flex items-center justify-center text-accent-green font-bold text-2xl">5</div>
+                    <div class="mt-6 md:mt-0 md:ml-8">
+                        <h3 class="text-2xl font-semibold">Support</h3>
+                        <p class="text-gray-400 mt-2">I provide ongoing support and maintenance to ensure your website continues to perform well and meet your business needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-dark-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold">Lawn Care <span class="text-accent-green">Portfolio</span></h2>
+                <p class="text-gray-400 mt-4">See how I've helped lawn care businesses like yours establish a powerful online presence</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-16">
+                <!-- Project 1 -->
+                <div class="glass-effect rounded-xl overflow-hidden">
+                    <div class="h-56 bg-gradient-to-r from-accent-green/20 to-dark-primary/50"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold">GreenLawn Professionals</h3>
+                        <p class="text-gray-400 mt-2">Complete website redesign with booking system integration</p>
+                        <div class="flex mt-4 space-x-4">
+                            <div class="bg-dark-primary/50 px-3 py-1 rounded-md">
+                                <span class="text-accent-green">+40%</span> Load Speed
+                            </div>
+                            <div class="bg-dark-primary/50 px-3 py-1 rounded-md">
+                                <span class="text-accent-green">5+</span> New Jobs/Month
+                            </div>
+                        </div>
+                        <p class="mt-4">"After launching our new website, we started getting booking requests directly through the site. The mobile experience is fantastic!"</p>
+                        <a href="#" class="inline-block mt-6 text-accent-green hover:underline">View Live Site →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="glass-effect rounded-xl overflow-hidden">
+                    <div class="h-56 bg-gradient-to-r from-accent-amber/20 to-dark-primary/50"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold">Premier Landscaping Co.</h3>
+                        <p class="text-gray-400 mt-2">5-page website with SEO optimization</p>
+                        <div class="flex mt-4 space-x-4">
+                            <div class="bg-dark-primary/50 px-3 py-1 rounded-md">
+                                <span class="text-accent-green">#1</span> Google Ranking
+                            </div>
+                            <div class="bg-dark-primary/50 px-3 py-1 rounded-md">
+                                <span class="text-accent-green">30%</span> More Leads
+                            </div>
+                        </div>
+                        <p class="mt-4">"We're now ranking first for 'landscaping services' in our area. The website looks professional and really showcases our work."</p>
+                        <a href="#" class="inline-block mt-6 text-accent-green hover:underline">View Live Site →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-dark-primary">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold">Client <span class="text-accent-green">Testimonials</span></h2>
+                <p class="text-gray-400 mt-4">Hear what lawn care business owners say about working with me</p>
+            </div>
+            
+            <div class="flex overflow-x-auto space-x-6 py-10 px-2 -mx-2 scrollbar-hide" id="testimonial-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card glass-effect p-6 rounded-xl">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-accent-green/10 rounded-full flex items-center justify-center text-accent-green font-bold">JD</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">John Doe</h4>
+                            <p class="text-gray-400 text-sm">GreenThumb Lawn Care</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-300">"The website has completely transformed how we get new clients. We're booking 5+ new jobs every month directly through the site. The investment was worth every penny!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card glass-effect p-6 rounded-xl">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-accent-green/10 rounded-full flex items-center justify-center text-accent-green font-bold">SM</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Sarah Miller</h4>
+                            <p class="text-gray-400 text-sm">Miller's Landscaping</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-300">"I was hesitant about spending money on a professional website, but it's been the best decision for my business. The mobile booking feature alone has made us so much more efficient."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card glass-effect p-6 rounded-xl">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-accent-green/10 rounded-full flex items-center justify-center text-accent-green font-bold">RJ</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Robert Johnson</h4>
+                            <p class="text-gray-400 text-sm">Perfect Cut Lawn Service</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-300">"The communication throughout the process was excellent. My website not only looks amazing but loads super fast. Customers compliment how easy it is to navigate and book services."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="py-20 bg-dark-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold">Why Choose Me for Your <span class="text-accent-green">Lawn Care Website</span></h2>
+                <p class="text-gray-400 mt-4">Specialized expertise that delivers real results for landscaping businesses</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-16">
+                <div class="glass-effect p-8 rounded-xl">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent-green/10 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-xl font-semibold">Industry-Specific Design</h3>
+                            <p class="text-gray-400 mt-2">I design with your lawn care customers in mind, creating intuitive experiences that showcase your services and convert visitors into clients.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-xl">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent-green/10 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-xl font-semibold">Blazing Fast Speed</h3>
+                            <p class="text-gray-400 mt-2">Websites that load instantly, so you never lose a lead. Fast loading times improve user experience and boost your search engine rankings.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-xl">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent-green/10 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-xl font-semibold">Mobile-First Approach</h3>
+                            <p class="text-gray-400 mt-2">Over 60% of your clients will book from their phone. I ensure your website provides an exceptional experience on all mobile devices.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-xl">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent-green/10 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-xl font-semibold">SEO-Ready Structure</h3>
+                            <p class="text-gray-400 mt-2">Built to help you rank higher on Google from day one. Clean code, proper headings, and schema markup give you a competitive advantage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-dark-primary">
+        <div class="container mx-auto px-6">
+            <div class="glass-effect rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold">Get a Free <span class="text-accent-green">Website Audit</span></h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">See how your current website is performing and get actionable recommendations for improvement. No obligation, just expert advice.</p>
+                </div>
+                
+                <div class="mt-10">
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/lrpolash/onlinemeeting" style="min-width:320px;height:700px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Calendly inline widget end -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-dark-secondary">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-accent-green">LawnWebDesign</h3>
+                    <p class="text-gray-400 mt-4">Creating high-converting websites specifically for lawn care and landscaping businesses.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold">Quick Links</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-accent-green transition">Services</a></li>
+                        <li><a href="#process" class="text-gray-400 hover:text-accent-green transition">Process</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-accent-green transition">Portfolio</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-accent-green transition">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold">Services</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-accent-green transition">Landing Pages</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent-green transition">5-Page Websites</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent-green transition">SEO Optimization</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent-green transition">Booking Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold">Contact</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li class="text-gray-400">Email: hello@lawnwebdesign.com</li>
+                        <li class="text-gray-400">Phone: (555) 123-4567</li>
+                        <li class="flex space-x-4 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-accent-green transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-accent-green transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-accent-green transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.2 6.7c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 16c-4 0-7.2-3.3-7.2-7.2 0-1.3.3-2.5.9-3.6 1.2 1.5 3 2.5 5 2.5 1.9 0 3.7-.9 4.9-2.4.9.7 1.5 1.8 1.5 3 0 2.2-1.8 4-4 4s-4-1.8-4-4c0-.6.1-1.2.4-1.8-.5 0-.9-.1-1.4-.1-1.1 0-2.2.3-3.1.8-.4.8-.6 1.7-.6 2.7 0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8c-.4 0-.7 0-1.1.1.7.8 1.2 1.7 1.2 2.8 0 1.9-1.1 3.5-2.7 4.3-.3.2-.7.3-1.1.3-.2 0-.4 0-.6-.1-.2-.1-.4-.2-.6-.3-.6-.4-1-1-1-1.7 0-.7.3-1.3.8-1.7-.1 0-.2-.1-.3-.1-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5c0 .6-.2 1.2-.5 1.7.5.2 1 .3 1.6.3 1.2 0 2.3-.5 3.1-1.2.8.5 1.5 1.2 2 2 .2.4.4.9.5 1.4-.4.2-.8.3-1.2.5-1.7.6-2.9 2.1-2.9 3.9 0 2.3 1.9 4.2 4.2 4.2s4.2-1.9 4.2-4.2c0-2.3-1.9-4.2-4.2-4.2z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 LawnWebDesign. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for testimonial scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('testimonial-container');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            container.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+            });
+            
+            container.addEventListener('mouseleave', () => {
+                isDown = false;
+            });
+            
+            container.addEventListener('mouseup', () => {
+                isDown = false;
+            });
+            
+            container.addEventListener('mousemove', (e) => {
+                if(!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX) * 2;
+                container.scrollLeft = scrollLeft - walk;
+            });
+        });
+    </script>
+</body>
+</html>
