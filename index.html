@@ -801,9 +801,13 @@
             mobileMenu.classList.toggle('open');
         });
         
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) {
-            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+        // Close menu when clicking outside - FIXED VERSION
+        document.addEventListener('click', (e) => {
+            const isMenuOpen = mobileMenu.classList.contains('open');
+            const isClickInsideMenu = mobileMenu.contains(e.target);
+            const isClickOnMenuButton = mobileMenuButton.contains(e.target);
+            
+            if (isMenuOpen && !isClickInsideMenu && !isClickOnMenuButton) {
                 mobileMenu.classList.remove('open');
             }
         });
