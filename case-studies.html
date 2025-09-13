@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LawnCare Case Studies | Success Stories from Lawn Care Businesses</title>
+    <meta name="description" content="Real success stories from lawn care businesses that transformed their online presence and grew their customer base with our professional web design services.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0D1117',
+                            800: '#161B22',
+                            700: '#21262D',
+                        },
+                        accent: {
+                            green: '#2Ecc71',
+                            teal: '#1ABC9C',
+                            blue: '#3498DB'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Mobile menu animation */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        
+        /* Case study hero image overlay */
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(13,17,23,0.9) 0%, rgba(13,17,23,0.7) 100%);
+        }
+        
+        /* Stat counter animation */
+        .stat-number {
+            transition: all 2s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 font-sans text-gray-300">
+    <!-- Navigation -->
+    <nav class="bg-dark-800 py-4 px-4 sm:px-6 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl sm:text-2xl font-bold text-accent-green">Hexon IT<span class="text-white">LawnPRO</span></a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-6 lg:space-x-8">
+                <a href="index.html#services" class="hover:text-accent-green transition">Services</a>
+                <a href="index.html#packages" class="hover:text-accent-green transition">Packages</a>
+                <a href="index.html#process" class="hover:text-accent-green transition">Process</a>
+                <a href="case-studies.html" class="text-accent-green transition">Case Studies</a>
+                <a href="index.html#testimonials" class="hover:text-accent-green transition">Testimonials</a>
+                <a href="index.html#faq" class="hover:text-accent-green transition">FAQ</a>
+            </div>
+            
+            <div class="flex items-center">
+                <a href="index.html#audit" class="hidden sm:block bg-accent-green hover:bg-green-500 text-white font-medium py-2 px-4 sm:px-5 rounded-lg transition">Free Audit</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden ml-4 text-gray-300 hover:text-accent-green focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-dark-800 px-4 pb-4">
+            <div class="flex flex-col space-y-3 pt-4">
+                <a href="index.html#services" class="hover:text-accent-green transition py-2">Services</a>
+                <a href="index.html#packages" class="hover:text-accent-green transition py-2">Packages</a>
+                <a href="index.html#process" class="hover:text-accent-green transition py-2">Process</a>
+                <a href="case-studies.html" class="text-accent-green transition py-2">Case Studies</a>
+                <a href="index.html#testimonials" class="hover:text-accent-green transition py-2">Testimonials</a>
+                <a href="index.html#faq" class="hover:text-accent-green transition py-2">FAQ</a>
+                <a href="index.html#audit" class="bg-accent-green hover:bg-green-500 text-white font-medium py-2 px-4 rounded-lg transition text-center">Free Audit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-16 sm:py-20 px-4 sm:px-6">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1630709437016-ee675b9b29b8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Lawn care case studies" class="object-cover w-full h-full opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark-900 to-dark-900/90"></div>
+        </div>
+        
+        <div class="container mx-auto relative z-10 flex flex-col items-center text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                Real <span class="text-accent-green">Success Stories</span> From Lawn Care Businesses
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 sm:mb-10 max-w-3xl px-4">
+                See how professional web design transformed these lawn care companies
+            </p>
+            <a href="#case-studies" class="bg-accent-green hover:bg-green-500 text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-lg text-base sm:text-lg mb-8 sm:mb-10 transition transform hover:scale-105">
+                View Case Studies
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 sm:py-16 bg-dark-800">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+                <div class="bg-dark-700 rounded-xl p-4 sm:p-6">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-accent-green mb-2 stat-number" data-target="245">0</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Leads Generated</div>
+                </div>
+                <div class="bg-dark-700 rounded-xl p-4 sm:p-6">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-accent-green mb-2 stat-number" data-target="127">0</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Clients Served</div>
+                </div>
+                <div class="bg-dark-700 rounded-xl p-4 sm:p-6">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-accent-green mb-2 stat-number" data-target="98">0</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Satisfaction Rate</div>
+                </div>
+                <div class="bg-dark-700 rounded-xl p-4 sm: p-6">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-accent-green mb-2 stat-number" data-target="325">0</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Traffic Increase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="py-16 sm:py-20 px-4 sm:px-6">
+        <div class="container mx-auto">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-4">Featured Case Studies</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 sm:mb-16 px-4">Real-world examples of how professional web design has transformed lawn care businesses</p>
+            
+            <!-- Case Study 1 -->
+            <div class="bg-dark-800 rounded-xl overflow-hidden mb-16 sm:mb-20 border border-dark-700">
+                <div class="h-64 sm:h-80 md:h-96 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1734303023491-db8037a21f09?q=80&w=1542&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="GreenLawns Transformation" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 hero-overlay flex items-center justify-center">
+                        <div class="text-center px-4 sm:px-6">
+                            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">GreenLawns Transformation</h3>
+                            <p class="text-gray-300 text-lg sm:text-xl max-w-3xl mx-auto">How a complete website redesign helped a local lawn care business increase leads by 300%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 md:p-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 mb-8 sm:mb-10">
+                        <div>
+                            <h4 class="text-lg sm:text-xl font-semibold text-white mb-4">The Challenge</h4>
+                            <p class="text-gray-400 mb-6">GreenLawns had been operating for 5 years with minimal online presence. Their outdated website was not mobile-friendly, had poor SEO, and provided no way for potential customers to book services online. They were receiving only 2-3 inquiries per week despite offering quality services.</p>
+                            <div class="bg-dark-700 rounded-lg p-4 sm:p-5 border-l-4 border-red-500">
+                                <p class="text-gray-300 italic">"We knew we provided excellent service, but our website wasn't reflecting that. We were losing potential customers to competitors with better online presence."</p>
+                                <p class="text-gray-400 mt-3">- Michael Johnson, Owner of GreenLawns</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg sm:text-xl font-semibold text-white mb-4">The Solution</h4>
+                            <p class="text-gray-400 mb-4">We implemented a comprehensive solution for GreenLawns:</p>
+                            <ul class="text-gray-400 space-y-2 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Complete website redesign with mobile-first approach</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Online booking system integration</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Local SEO optimization targeting their service area</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Professional photography showcasing their work</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Content strategy highlighting their expertise</span>
+                                </li>
+                            </ul>
+                            <div class="bg-accent-green/10 rounded-lg p-4 sm:p-5 border border-accent-green/30">
+                                <p class="text-gray-300"><span class="text-accent-green font-semibold">Timeline:</span> 3 weeks from initial consultation to launch</p>
+                                <p class="text-gray-300 mt-2"><span class="text-accent-green font-semibold">Package:</span> Pro Bundle with additional SEO optimization</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-lg sm:text-xl font-semibold text-white mb-4">The Results</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-10">
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">Before</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">2-3 calls/week</p>
+                        </div>
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">After</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">8-12 calls/week</p>
+                        </div>
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">Google Ranking</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">Page 3 → Top 3</p>
+                        </div>
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">Website Traffic</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">+325%</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-accent-green/10 rounded-xl p-6 sm:p-8 border border-accent-green/30">
+                        <p class="text-gray-300 italic text-lg sm:text-xl mb-4">"The new website completely transformed my business. We're now getting consistent leads without spending on advertising. The booking system has saved me hours of phone time each week, and we've been able to expand our team to handle the increased demand."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden mr-4">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Mike Johnson">
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Michael Johnson</p>
+                                <p class="text-accent-green">Owner, GreenLawns</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study 2 -->
+            <div class="bg-dark-800 rounded-xl overflow-hidden mb-16 sm:mb-20 border border-dark-700">
+                <div class="h-64 sm:h-80 md:h-96 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1544914379-806667cd9489?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="PremiumTurf Case Study" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 hero-overlay flex items-center justify-center">
+                        <div class="text-center px-4 sm:px-6">
+                            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">PremiumTurf Case Study</h3>
+                            <p class="text-gray-300 text-lg sm:text-xl max-w-3xl mx-auto">Implementing an online booking system that increased appointments by 200%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 md:p-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 mb-8 sm:mb-10">
+                        <div>
+                            <h4 class="text-lg sm:text-xl font-semibold text-white mb-4">The Challenge</h4>
+                            <p class="text-gray-400 mb-6">PremiumTurf had a basic website but no way for customers to book services online. All appointments were handled over the phone, which created bottlenecks during peak seasons. They were missing after-hours inquiries and losing potential customers who preferred online booking.</p>
+                            <div class="bg-dark-700 rounded-lg p-4 sm:p-5 border-l-4 border-red-500">
+                                <p class="text-gray-300 italic">"During spring, our phone would be ringing off the hook. We were missing calls and losing business because customers couldn't book online at their convenience."</p>
+                                <p class="text-gray-400 mt-3">- Sarah Williams, Owner of PremiumTurf</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg sm:text-xl font-semibold text-white mb-4">The Solution</h4>
+                            <p class="text-gray-400 mb-4">We developed a comprehensive booking solution for PremiumTurf:</p>
+                            <ul class="text-gray-400 space-y-2 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Custom online booking system integrated with their website</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Mobile-responsive design optimized for on-the-go booking</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Automated confirmation and reminder emails</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Calendar synchronization with their existing scheduling</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Service customization with clear pricing options</span>
+                                </li>
+                            </ul>
+                            <div class="bg-accent-green/10 rounded-lg p-4 sm:p-5 border border-accent-green/30">
+                                <p class="text-gray-300"><span class="text-accent-green font-semibold">Timeline:</span> 4 weeks including integration and testing</p>
+                                <p class="text-gray-300 mt-2"><span class="text-accent-green font-semibold">Package:</span> Growth Bundle with booking system add-on</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-lg sm:text-xl font-semibold text-white mb-4">The Results</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-10">
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">Before</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">0 online bookings</p>
+                        </div>
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">After</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">25+ bookings/month</p>
+                        </div>
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">Mobile Traffic</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">68% of total</p>
+                        </div>
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">Bounce Rate</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">74% → 32%</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-accent-green/10 rounded-xl p-6 sm:p-8 border border-accent-green/30">
+                        <p class="text-gray-300 italic text-lg sm:text-xl mb-4">"The booking system integration has saved me hours of phone time each week. Customers love being able to book online at their convenience, and we've significantly reduced missed appointments with the automated reminder system. It's been a game-changer for our business operations."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden mr-4">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sarah Williams">
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Sarah Williams</p>
+                                <p class="text-accent-green">Owner, PremiumTurf</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study 3 -->
+            <div class="bg-dark-800 rounded-xl overflow-hidden border border-dark-700">
+                <div class="h-64 sm:h-80 md:h-96 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1734303023518-71e656574f50?q=80&w=1542&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Elite Lawn Care Case Study" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 hero-overlay flex items-center justify-center">
+                        <div class="text-center px-4 sm:px-6">
+                            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Elite Lawn Care SEO Success</h3>
+                            <p class="text-gray-300 text-lg sm:text-xl max-w-3xl mx-auto">How targeted SEO took a local lawn care business from invisible to first page rankings</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 md:p-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 mb-8 sm:mb-10">
+                        <div>
+                            <h4 class="text-lg sm:text-xl font-semibold text-white mb-4">The Challenge</h4>
+                            <p class="text-gray-400 mb-6">Elite Lawn Care had a decent website but wasn't ranking for any relevant local search terms. They were invisible to potential customers searching for lawn care services in their area. Despite offering premium services, they were losing business to competitors who ranked higher in search results.</p>
+                            <div class="bg-dark-700 rounded-lg p-4 sm:p-5 border-l-4 border-red-500">
+                                <p class="text-gray-300 italic">"We knew we provided better service than our competitors, but we couldn't get found online. It was frustrating to see inferior services ranking above us just because they had better SEO."</p>
+                                <p class="text-gray-400 mt-3">- David Chen, Owner of Elite Lawn Care</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg sm:text-xl font-semibold text-white mb-4">The Solution</h4>
+                            <p class="text-gray-400 mb-4">We implemented a comprehensive local SEO strategy:</p>
+                            <ul class="text-gray-400 space-y-2 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Comprehensive keyword research for local lawn care services</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>On-page optimization including service page creation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Local business directory listings and citation building</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Google Business Profile optimization</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Content strategy targeting local search intent</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-green mt-1 mr-3"></i>
+                                    <span>Review generation system implementation</span>
+                                </li>
+                            </ul>
+                            <div class="bg-accent-green/10 rounded-lg p-4 sm:p-5 border border-accent-green/30">
+                                <p class="text-gray-300"><span class="text-accent-green font-semibold">Timeline:</span> 8 weeks for initial results, ongoing optimization</p>
+                                <p class="text-gray-300 mt-2"><span class="text-accent-green font-semibold">Package:</span> Pro Bundle with advanced SEO add-on</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-lg sm:text-xl font-semibold text-white mb-4">The Results</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-10">
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">Before</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">Page 4+ rankings</p>
+                        </div>
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">After</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">Top 3 rankings</p>
+                        </div>
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">Organic Traffic</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">+420%</p>
+                        </div>
+                        <div class="bg-dark-700 rounded-lg p-4 sm:p-5 text-center">
+                            <p class="text-gray-400 text-sm sm:text-base mb-1">Google Reviews</p>
+                            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-accent-green">12 → 47</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-accent-green/10 rounded-xl p-6 sm:p-8 border border-accent-green/30">
+                        <p class="text-gray-300 italic text-lg sm:text-xl mb-4">"The SEO results have been outstanding. Our website now shows up on the first page for our main services, and we’re seeing a big increase in high-quality leads. Instead of constantly reaching out, customers are coming to us. The return on this SEO investment has far exceeded our expectations."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden mr-4">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="David Chen">
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">David Chen</p>
+                                <p class="text-accent-green">Owner, Elite Lawn Care</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-dark-800 to-dark-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Ready to Create Your Success Story?</h2>
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-8 sm:mb-10 px-4">Get a free website audit and discover how a professional website can transform your lawn care business</p>
+            
+            <a href="index.html#audit" class="inline-block bg-accent-green hover:bg-green-500 text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-lg text-base sm:text-lg mb-8 sm:mb-10 transition transform hover:scale-105">
+                Get Your Free Website Audit
+            </a>
+            
+            <p class="text-gray-400 text-sm sm:text-base">Join 100+ lawn care businesses that have transformed their online presence</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 sm:py-12 px-4 sm:px-6 bg-dark-900 border-t border-dark-800">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+                <div class="md:col-span-2 lg:col-span-1">
+                    <a href="index.html" class="text-xl sm:text-2xl font-bold text-accent-green block mb-4 sm:mb-6">Hexon IT<span class="text-white">LawnPRO</span></a>
+                    <p class="text-gray-400 text-sm sm:text-base mb-4 sm:mb-6">Professional web design services tailored for lawn care businesses looking to grow online.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent-green transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent-green transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent-green transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent-green transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Services</h4>
+                    <ul class="space-y-2 sm:space-y-3">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Landing Page Design</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">5-Page Website Package</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">SEO Optimization</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Booking System Integration</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Quick Links</h4>
+                    <ul class="space-y-2 sm:space-y-3">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Services</a></li>
+                        <a href="index.html#packages" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Packages</a></li>
+                        <li><a href="index.html#process" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Process</a></li>
+                        <li><a href="case-studies.html" class="text-accent-green transition text-sm sm:text-base">Case Studies</a></li>
+                        <li><a href="index.html#testimonials" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Testimonials</a></li>
+                        <li><a href="index.html#faq" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Contact</h4>
+                    <ul class="space-y-2 sm:space-y-3">
+                        <li class="text-gray-400 text-sm sm:text-base"><i class="fas fa-envelope mr-2 text-accent-green"></i>hexonitsolution@gmail.com</li>
+                        <li class="text-gray-400 text-sm sm:text-base"><i class="fas fa-phone mr-2 text-accent-green"></i>+8801914232500</li>
+                        <li class="text-gray-400 text-sm sm:text-base"><i class="fas fa-map-marker-alt mr-2 text-accent-green"></i> Serving clients nationwide</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-dark-800 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-xs sm:text-sm mb-3 md:mb-0">© 2024 Hexon IT LawnPRO. All rights reserved.</p>
+                <div class="flex space-x-4 sm:space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-accent-green text-xs sm:text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-accent-green text-xs sm:text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-accent-green text-xs sm:text-sm transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                    }
+                }
+            });
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Close menu when clicking outside - FIXED VERSION
+        document.addEventListener('click', (e) => {
+            const isMenuOpen = mobileMenu.classList.contains('open');
+            const isClickInsideMenu = mobileMenu.contains(e.target);
+            const isClickOnMenuButton = mobileMenuButton.contains(e.target);
+            
+            if (isMenuOpen && !isClickInsideMenu && !isClickOnMenuButton) {
+                mobileMenu.classList.remove('open');
+            }
+        });
+        
+        // Animate stats counter
+        function animateStats() {
+            const statElements = document.querySelectorAll('.stat-number');
+            const speed = 200; // The lower the slower
+            
+            statElements.forEach((statElement) => {
+                const target = parseInt(statElement.getAttribute('data-target'));
+                let count = 0;
+                
+                const updateCount = () => {
+                    const increment = Math.ceil(target / speed);
+                    
+                    if (count < target) {
+                        count += increment;
+                        if (count > target) count = target;
+                        statElement.innerText = count;
+                        setTimeout(updateCount, 1);
+                    } else {
+                        statElement.innerText = target;
+                    }
+                };
+                
+                updateCount();
+            });
+        }
+        
+        // Initialize stats animation when in viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const statsSection = document.querySelector('.bg-dark-800');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+</html>
