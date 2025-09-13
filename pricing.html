@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | LawnCare Web Design | Professional Websites for Lawn Care Businesses</title>
+    <meta name="description" content="Affordable one-time pricing for professional web design services tailored for lawn care businesses. Get a SEO-optimized, mobile-responsive website that attracts more customers.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0D1117',
+                            800: '#161B22',
+                            700: '#21262D',
+                        },
+                        accent: {
+                            green: '#2Ecc71',
+                            teal: '#1ABC9C',
+                            blue: '#3498DB'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Mobile menu animation */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        
+        /* Pricing card hover effects */
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Feature list styling */
+        .feature-list li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .feature-list i {
+            margin-top: 0.25rem;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+        
+        /* Calendly form styling */
+        .calendly-container {
+            min-height: 700px;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 font-sans text-gray-300">
+    <!-- Navigation -->
+    <nav class="bg-dark-800 py-4 px-4 sm:px-6 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl sm:text-2xl font-bold text-accent-green">Hexon IT<span class="text-white">LawnPRO</span></a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-6 lg:space-x-8">
+                <a href="#services" class="hover:text-accent-green transition">Services</a>
+                <a href="#pricing" class="hover:text-accent-green transition">Pricing</a>
+                <a href="#process" class="hover:text-accent-green transition">Process</a>
+                <a href="#case-studies" class="hover:text-accent-green transition">Case Studies</a>
+                <a href="#testimonials" class="hover:text-accent-green transition">Testimonials</a>
+                <a href="#faq" class="hover:text-accent-green transition">FAQ</a>
+            </div>
+            
+            <div class="flex items-center">
+                <a href="#audit" class="hidden sm:block bg-accent-green hover:bg-green-500 text-white font-medium py-2 px-4 sm:px-5 rounded-lg transition">Free Audit</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden ml-4 text-gray-300 hover:text-accent-green focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-dark-800 px-4 pb-4">
+            <div class="flex flex-col space-y-3 pt-4">
+                <a href="#services" class="hover:text-accent-green transition py-2">Services</a>
+                <a href="#pricing" class="hover:text-accent-green transition py-2">Pricing</a>
+                <a href="#process" class="hover:text-accent-green transition py-2">Process</a>
+                <a href="#case-studies" class="hover:text-accent-green transition py-2">Case Studies</a>
+                <a href="#testimonials" class="hover:text-accent-green transition py-2">Testimonials</a>
+                <a href="#faq" class="hover:text-accent-green transition py-2">FAQ</a>
+                <a href="#audit" class="bg-accent-green hover:bg-green-500 text-white font-medium py-2 px-4 rounded-lg transition text-center">Free Audit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero Section -->
+    <section id="pricing" class="relative py-16 sm:py-20 px-4 sm:px-6">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Lawn care pricing" class="object-cover w-full h-full opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark-900 to-dark-900/90"></div>
+        </div>
+        
+        <div class="container mx-auto relative z-10 flex flex-col items-center text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                Simple, One-Time <span class="text-accent-green">Pricing</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 sm:mb-10 max-w-3xl px-4">
+                Professional website design packages with no monthly fees. Pay once and own your website forever.
+            </p>
+            
+            <div class="bg-accent-green/10 border border-accent-green/20 rounded-lg px-4 py-3 mb-8">
+                <p class="text-accent-green font-medium"><i class="fas fa-gift mr-2"></i>Limited Time: Free SEO Setup with any package</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards Section -->
+    <section class="py-10 px-4 sm:px-6 bg-dark-800">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Kickstart Bundle -->
+                <div class="pricing-card bg-dark-700 rounded-xl p-6 border border-dark-600">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Kickstart Bundle</h3>
+                        <div class="flex items-baseline justify-center">
+                            <span class="text-3xl font-bold text-accent-green">$79</span>
+                            <span class="text-gray-400 ml-2">One-Time</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mt-2">Perfect for getting your business online quickly</p>
+                    </div>
+                    <ul class="feature-list mb-8">
+                        <li><i class="fas fa-check text-accent-green"></i> Business Card Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Simple Logo Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> 1-Page Pro Website</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Pro Social Media Setup</li>
+                        <li><i class="fas fa-check text-accent-green"></i> 1 Cover Design</li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-dark-600 hover:bg-dark-500 text-white text-center font-semibold py-3 px-4 rounded-lg transition">Get Started</a>
+                </div>
+                
+                <!-- Starter Bundle -->
+                <div class="pricing-card bg-dark-700 rounded-xl p-6 border-2 border-accent-green relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <div class="bg-accent-green text-dark-900 text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</div>
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Starter Bundle</h3>
+                        <div class="flex items-baseline justify-center">
+                            <span class="text-3xl font-bold text-accent-green">$99</span>
+                            <span class="text-gray-400 ml-2">One-Time</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mt-2">Everything you need to establish your online presence</p>
+                    </div>
+                    <ul class="feature-list mb-8">
+                        <li><i class="fas fa-check text-accent-green"></i> Business Card Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Logo Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> 1-Page Pro Website</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Door Hanger Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Social Media Cover Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Email Signature Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> 7 Days Content Planning</li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-accent-green hover:bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg transition">Get Started</a>
+                </div>
+                
+                <!-- Growth Bundle -->
+                <div class="pricing-card bg-dark-700 rounded-xl p-6 border border-dark-600">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Growth Bundle</h3>
+                        <div class="flex items-baseline justify-center">
+                            <span class="text-3xl font-bold text-accent-green">$199</span>
+                            <span class="text-gray-400 ml-2">One-Time</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mt-2">Designed to help your business attract more customers</p>
+                    </div>
+                    <ul class="feature-list mb-8">
+                        <li><i class="fas fa-check text-accent-green"></i> Business Card Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Logo Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> 3-Page Website</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Door Hanger Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> 2 Local Directory Setup</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Basic Local SEO Setup</li>
+                        <li><i class="fas fa-check text-accent-green"></i> 5 Editable Social Post Templates</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Review Request Card Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Yard Sign Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Uniform T-Shirt Design</li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-dark-600 hover:bg-dark-500 text-white text-center font-semibold py-3 px-4 rounded-lg transition">Get Started</a>
+                </div>
+                
+                <!-- Pro Bundle -->
+                <div class="pricing-card bg-dark-700 rounded-xl p-6 border border-dark-600">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Pro Bundle</h3>
+                        <div class="flex items-baseline justify-center">
+                            <span class="text-3xl font-bold text-accent-green">$399</span>
+                            <span class="text-gray-400 ml-2">One-Time</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mt-2">Complete branding and online presence solution</p>
+                    </div>
+                    <ul class="feature-list mb-8">
+                        <li><i class="fas fa-check text-accent-green"></i> Business Card + Flyer + Invoice</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Logo + Full Brand Kit</li>
+                        <li><i class="fas fa-check text-accent-green"></i> 5-Page Website</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Advanced Local SEO Setup</li>
+                        <li><i class="fas fa-check text-accent-green"></i> 5 Local Directory Setup</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Door Hanger Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> 10 Editable Social Post Templates</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Yard Sign Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Vehicle Magnet/Wrap Design</li>
+                        <li><i class="fas fa-check text-accent-green"></i> Set Design (T-Shirt, Hat, Hoodie)</li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-dark-600 hover:bg-dark-500 text-white text-center font-semibold py-3 px-4 rounded-lg transition">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services Section -->
+    <section class="py-16 px-4 sm:px-6 bg-dark-900">
+        <div class="container mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white text-center mb-4">Additional Services</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 px-4">Enhance your website with these specialized services</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Graphic Design -->
+                <div class="bg-dark-800 rounded-xl p-6 border border-dark-700">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-green-900/30 text-accent-green flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-paint-brush text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Graphic Design</h3>
+                            <p class="text-gray-400">Professional logos, business cards, vehicle wraps, yard signs, and marketing materials that establish your brand identity.</p>
+                        </div>
+                    </div>
+                    <div class="bg-dark-700 rounded-lg p-4 mt-4">
+                        <p class="text-accent-green font-semibold">Starting at $99</p>
+                    </div>
+                </div>
+                
+                <!-- Email Marketing -->
+                <div class="bg-dark-800 rounded-xl p-6 border border-dark-700">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-green-900/30 text-accent-green flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Email Marketing</h3>
+                            <p class="text-gray-400">Engage customers with targeted email campaigns, newsletters, and automated sequences that drive repeat business.</p>
+                        </div>
+                    </div>
+                    <div class="bg-dark-700 rounded-lg p-4 mt-4">
+                        <p class="text-accent-green font-semibold">Starting at $149/month</p>
+                    </div>
+                </div>
+                
+                <!-- SEO Optimization -->
+                <div class="bg-dark-800 rounded-xl p-6 border border-dark-700">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-green-900/30 text-accent-green flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-search text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">SEO Optimization</h3>
+                            <p class="text-gray-400">Get found by local customers searching for lawn care services. We optimize your website to rank higher in search results.</p>
+                        </div>
+                    </div>
+                    <div class="bg-dark-700 rounded-lg p-4 mt-4">
+                        <p class="text-accent-green font-semibold">Starting at $199/month</p>
+                    </div>
+                </div>
+                
+                <!-- E-commerce Solutions -->
+                <div class="bg-dark-800 rounded-xl p-6 border border-dark-700">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-green-900/30 text-accent-green flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">E-commerce Solutions</h3>
+                            <p class="text-gray-400">Sell lawn care products, seasonal packages, and subscription services directly through your website.</p>
+                        </div>
+                    </div>
+                    <div class="bg-dark-700 rounded-lg p-4 mt-4">
+                        <p class="text-accent-green font-semibold">Starting at $249</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="py-16 px-4 sm:px-6 bg-dark-800">
+        <div class="container mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white text-center mb-4">Package Comparison</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 px-4">See which package includes the features you need for your lawn care business</p>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-400">
+                    <thead class="text-xs uppercase bg-dark-700 text-gray-400">
+                        <tr>
+                            <th scope="col" class="px-4 py-3">Feature</th>
+                            <th scope="col" class="px-4 py-3">Kickstart</th>
+                            <th scope="col" class="px-4 py-3">Starter</th>
+                            <th scope="col" class="px-4 py-3">Growth</th>
+                            <th scope="col" class="px-4 py-3">Pro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-dark-700 bg-dark-800">
+                            <th scope="row" class="px-4 py-3 font-medium text-white">Website Pages</th>
+                            <td class="px-4 py-3">1 Page</td>
+                            <td class="px-4 py-3">1 Page</td>
+                            <td class="px-4 py-3">3 Pages</td>
+                            <td class="px-4 py-3">5 Pages</td>
+                        </tr>
+                        <tr class="border-b border-dark-700 bg-dark-800">
+                            <th scope="row" class="px-4 py-3 font-medium text-white">Logo Design</th>
+                            <td class="px-4 py-3"><i class="fas fa-check text-accent-green"></i></td>
+                            <td class="px-4 py-3"><i class="fas fa-check text-accent-green"></i></td>
+                            <td class="px-4 py-3"><i class="fas fa-check text-accent-green"></i></td>
+                            <td class="px-4 py-3"><i class="fas fa-check text-accent-green"></i></td>
+                        </tr>
+                        <tr class="border-b border-dark-700 bg-dark-800">
+                            <th scope="row" class="px-4 py-3 font-medium text-white">Business Cards</th>
+                            <td class="px-4 py-3"><i class="fas fa-check text-accent-green"></i></td>
+                            <td class="px-4 py-3"><i class="fas fa-check text-accent-green"></i></td>
+                            <td class="px-4 py-3"><i class="fas fa-check text-accent-green"></i></td>
+                            <td class="px-4 py-3"><i class="fas fa-check text-accent-green"></i></td>
+                        </tr>
+                        <tr class="border-b border-dark-700 bg-dark-800">
+                            <th scope="row" class="px-4 py-3 font-medium text-white">SEO Setup</th>
+                            <td class="px-4 py-3"><i class="fas fa-times text-red-500"></i></td>
+                            <td class="px-4 py-3"><i class="fas fa-times text-red-500"></i></td>
+                            <td class="px-4 py-3">Basic</td>
+                            <td class="px-4 py-3">Advanced</td>
+                        </tr>
+                        <tr class="border-b border-dark-700 bg-dark-800">
+                            <th scope="row" class="px-4 py-3 font-medium text-white">Social Media Templates</th>
+                            <td class="px-4 py-3">-</td>
+                            <td class="px-4 py-3">-</td>
+                            <td class="px-4 py-3">5 Templates</td>
+                            <td class="px-4 py-3">10 Templates</td>
+                        </tr>
+                        <tr class="border-b border-dark-700 bg-dark-800">
+                            <th scope="row" class="px-4 py-3 font-medium text-white">Marketing Materials</th>
+                            <td class="px-4 py-3">1 Cover Design</td>
+                            <td class="px-4 py-3">Door Hanger + Social Covers</td>
+                            <td class="px-4 py-3">Door Hanger + Yard Sign</td>
+                            <td class="px-4 py-3">Door Hanger + Yard Sign + Vehicle</td>
+                        </tr>
+                        <tr class="border-b border-dark-700 bg-dark-800">
+                            <th scope="row" class="px-4 py-3 font-medium text-white">Branding Materials</th>
+                            <td class="px-4 py-3">-</td>
+                            <td class="px-4 py-3">Email Signature</td>
+                            <td class="px-4 py-3">T-Shirt Design</td>
+                            <td class="px-4 py-3">Full Brand Kit + Uniform Set</td>
+                        </tr>
+                        <tr class="border-b border-dark-700 bg-dark-800">
+                            <th scope="row" class="px-4 py-3 font-medium text-white">Local Directory Setup</th>
+                            <td class="px-4 py-3">-</td>
+                            <td class="px-4 py-3">-</td>
+                            <td class="px-4 py-3">2 Directories</td>
+                            <td class="px-4 py-3">5 Directories</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose One-Time Pricing -->
+    <section class="py-16 px-4 sm:px-6 bg-dark-900">
+        <div class="container mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white text-center mb-4">Why Choose One-Time Pricing?</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 px-4">No monthly fees, no ongoing costs - just a professional website that works for your business</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-accent-green/10 text-accent-green flex items-center justify-center mb-4">
+                        <i class="fas fa-wallet text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Cost Effective</h3>
+                    <p class="text-gray-400">Pay once and own your website forever. No recurring monthly fees eating into your profits.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-accent-green/10 text-accent-green flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Better ROI</h3>
+                    <p class="text-gray-400">Your one-time investment continues to generate leads and customers for years to come.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-accent-green/10 text-accent-green flex items-center justify-center mb-4">
+                        <i class="fas fa-cogs text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Full Ownership</h3>
+                    <p class="text-gray-400">You own all design files and content. No lock-in contracts or proprietary platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4 sm:px-6 bg-dark-800">
+        <div class="container mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white text-center mb-4">Frequently Asked Questions</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 px-4">Common questions about our one-time pricing packages</p>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-dark-700 rounded-xl p-6 border border-dark-600">
+                    <h3 class="text-lg font-semibold text-white mb-3">What's included in the one-time price?</h3>
+                    <p class="text-gray-400">The one-time price includes design, development, and setup of all features listed in your chosen package. You own the final product and there are no recurring fees for the website itself.</p>
+                </div>
+                
+                <div class="bg-dark-700 rounded-xl p-6 border border-dark-600">
+                    <h3 class="text-lg font-semibold text-white mb-3">Are there any ongoing costs?</h3>
+                    <p class="text-gray-400">The only ongoing costs would be for website hosting (typically $10-15/month) and domain registration (around $15/year). We can help you set these up with reliable providers.</p>
+                </div>
+                
+                <div class="bg-dark-700 rounded-xl p-6 border border-dark-600">
+                    <h3 class="text-lg font-semibold text-white mb-3">How long does it take to complete my website?</h3>
+                    <p class="text-gray-400">Most projects are completed within 2-3 weeks depending on the package complexity and how quickly we receive your content. We'll provide a specific timeline after our initial consultation.</p>
+                </div>
+                
+                <div class="bg-dark-700 rounded-xl p-6 border border-dark-600">
+                    <h3 class="text-lg font-semibold text-white mb-3">What if I need changes after my website is completed?</h3>
+                    <p class="text-gray-400">We offer optional maintenance plans for ongoing updates, or you can make changes yourself since you'll have full access to your website. We also provide training on how to manage basic content updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Calendly -->
+    <section id="contact" class="py-16 px-4 sm:px-6 bg-gradient-to-r from-dark-800 to-dark-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10 px-4">Schedule a free consultation to discuss which package is right for your lawn care business</p>
+            
+            <div class="bg-dark-700 rounded-xl p-8 max-w-4xl mx-auto border border-dark-600">
+                <h3 class="text-xl font-semibold text-white mb-6">Schedule Your Free Consultation</h3>
+                
+                               <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/lrpolash/onlinemeeting" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 sm:py-12 px-4 sm:px-6 bg-dark-900 border-t border-dark-800">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+                <div class="md:col-span-2 lg:col-span-1">
+                    <a href="#" class="text-xl sm:text-2xl font-bold text-accent-green block mb-4 sm:mb-6">Hexon IT<span class="text-white">LawnPRO</span></a>
+                    <p class="text-gray-400 text-sm sm:text-base mb-4 sm:mb-6">Professional web design services tailored for lawn care businesses looking to grow online.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent-green transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent-green transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent-green transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent-green transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Services</h4>
+                    <ul class="space-y-2 sm:space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Landing Page Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Website Packages</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">SEO Optimization</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Booking System Integration</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Quick Links</h4>
+                    <ul class="space-y-2 sm:space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Services</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Pricing</a></li>
+                        <li><a href="#process" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Process</a></li>
+                        <li><a href="#case-studies" class="text-gray-400 hover:text-accent-green transition text-sm sm:text-base">Case Studies</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Contact</h4>
+                    <ul class="space-y-2 sm:space-y-3">
+                        <li class="text-gray-400 text-sm sm:text-base"><i class="fas fa-envelope mr-2 text-accent-green"></i>hexonitsolution@gmail.com</li>
+                        <li class="text-gray-400 text-sm sm:text-base"><i class="fas fa-phone mr-2 text-accent-green"></i>+8801914232500</li>
+                        <li class="text-gray-400 text-sm sm:text-base"><i class="fas fa-map-marker-alt mr-2 text-accent-green"></i> Serving clients nationwide</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-dark-800 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-xs sm:text-sm mb-3 md:mb-0">© 2024 Hexon IT LawnPRO. All rights reserved.</p>
+                <div class="flex space-x-4 sm:space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-accent-green text-xs sm:text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-accent-green text-xs sm:text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-accent-green text-xs sm:text-sm transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                    }
+                }
+            });
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const isMenuOpen = mobileMenu.classList.contains('open');
+            const isClickInsideMenu = mobileMenu.contains(e.target);
+            const isClickOnMenuButton = mobileMenuButton.contains(e.target);
+            
+            if (isMenuOpen && !isClickInsideMenu && !isClickOnMenuButton) {
+                mobileMenu.classList.remove('open');
+            }
+        });
+
+        // Initialize Calendly widget
+        document.addEventListener('DOMContentLoaded', function() {
+            // You can customize the Calendly integration here if needed
+            // For example, pre-fill Calendly with user information
+        });
+    </script>
+</body>
+</html>
