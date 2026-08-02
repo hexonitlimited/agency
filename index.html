@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>হেক্সন আইটি | এসএমই ব্যবসার জন্য পেশাদার ওয়েবসাইট ডিজাইন</title>
+    <meta name="description" content="বাংলাদেশের এসএমই ব্যবসার জন্য কাস্টম ওয়েবসাইট ডিজাইন, ল্যান্ডিং পেজ, ই-কমার্স ও রেস্পন্সিভ ডিজাইন সেবা।" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe',
+                            300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6',
+                            600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a',
+                        },
+                        dark: { 900: '#0A0F1F', 800: '#111827', 700: '#1F2937', 600: '#374151' }
+                    },
+                    fontFamily: { sans: ['Hind Siliguri', 'Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease-in-out; }
+        .mobile-menu.open { max-height: 500px; }
+        .gradient-bg { background: linear-gradient(135deg, #0A0F1F 0%, #111827 50%, #1e3a8a 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.25); }
+        .btn-primary { background: linear-gradient(135deg, #2563eb, #1d4ed8); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: scale(1.03); box-shadow: 0 10px 25px -8px #2563eb; }
+        .btn-outline { border: 2px solid #3b82f6; transition: all 0.3s ease; }
+        .btn-outline:hover { background: #3b82f6; color: #fff; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: linear-gradient(90deg, #3b82f6, #60a5fa); margin: 12px auto 0; border-radius: 4px; }
+        .stat-card { background: rgba(31, 41, 55, 0.5); backdrop-filter: blur(8px); border: 1px solid rgba(59, 130, 246, 0.12); }
+        .faq-item { border-bottom: 1px solid rgba(55, 65, 81, 0.4); }
+        .faq-item:last-child { border-bottom: none; }
+        .service-icon { background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.05)); }
+        .package-card { background: rgba(31, 41, 55, 0.6); backdrop-filter: blur(4px); display: flex; flex-direction: column; height: 100%; }
+        .package-card .package-body { flex: 1; }
+        .package-card ul li { padding: 3px 0; font-size: 0.9rem; }
+        .package-card ul li i { width: 18px; color: #60a5fa; }
+        .badge-popular { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .badge-best { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+        .feature-toggle { cursor: pointer; color: #60a5fa; font-weight: 500; }
+        .feature-toggle:hover { text-decoration: underline; }
+        .extra-features { display: none; }
+        .extra-features.open { display: block; }
+        .testimonial-card { background: rgba(31, 41, 55, 0.5); border: 1px solid rgba(55, 65, 81, 0.4); }
+        .hero-center { text-align: center; }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-300 font-sans antialiased">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="bg-dark-800/90 backdrop-blur-md border-b border-dark-700 sticky top-0 z-50 px-4 sm:px-6 py-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white flex items-center gap-2">
+                <span class="text-primary-500"><i class="fas fa-code"></i></span>
+                <span class="text-primary-400">হেক্সন</span><span class="text-white">আইটি</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium">
+                <a href="#services" class="hover:text-primary-400 transition">সেবাসমূহ</a>
+                <a href="#packages" class="hover:text-primary-400 transition">প্যাকেজ</a>
+                <a href="#portfolio" class="hover:text-primary-400 transition">পোর্টফোলিও</a>
+                <a href="#testimonials" class="hover:text-primary-400 transition">ক্লায়েন্ট</a>
+                <a href="#faq" class="hover:text-primary-400 transition">প্রশ্ন</a>
+                <a href="#contact" class="btn-primary text-white px-5 py-2 rounded-lg font-semibold text-sm">ফ্রি কনসালটেশন</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-400 hover:text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-dark-800 px-4 pb-5 mt-2 rounded-b-xl border-b border-dark-700">
+            <div class="flex flex-col space-y-3 text-sm font-medium">
+                <a href="#services" class="hover:text-primary-400 py-2 transition">সেবাসমূহ</a>
+                <a href="#packages" class="hover:text-primary-400 py-2 transition">প্যাকেজ</a>
+                <a href="#portfolio" class="hover:text-primary-400 py-2 transition">পোর্টফোলিও</a>
+                <a href="#testimonials" class="hover:text-primary-400 py-2 transition">ক্লায়েন্ট</a>
+                <a href="#faq" class="hover:text-primary-400 py-2 transition">প্রশ্ন</a>
+                <a href="#contact" class="btn-primary text-white text-center py-2.5 rounded-lg font-semibold">ফ্রি কনসালটেশন</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO (ছবি বাদ, সবকিছু সেন্টার) ===== -->
+    <section class="gradient-bg relative overflow-hidden py-20 sm:py-28 px-4 sm:px-6">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-900/20 to-transparent pointer-events-none"></div>
+        <div class="container mx-auto relative z-10 text-center hero-center">
+            <div class="inline-flex items-center gap-2 bg-primary-900/30 text-primary-300 px-4 py-1.5 rounded-full text-sm font-medium border border-primary-700/40 mb-5">
+                <i class="fas fa-paint-brush"></i> ওয়েব ডিজাইন বিশেষজ্ঞ
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+                অগ্নির বক্সার জুন অগ্রনিক ওয়েবসাইট ডিজাইন
+            </h1>
+            <p class="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto mt-4 leading-relaxed">
+                কাউন্টি ওয়েবসাইট ডিজাইন যা অগ্নির ব্রাহিক জুনে ধরে, কাউন্টির প্রদান কাছপঁপ করে এবং বরিদ্র বাড়ায়। 100% প্রাপ্তির ও এসই-ফ্রেডিন।
+            </p>
+            <div class="flex flex-wrap gap-4 mt-8 justify-center">
+                <a href="#packages" class="btn-primary text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg shadow-blue-600/25">
+                    প্যাকেজ দেখুন <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#portfolio" class="btn-outline text-primary-400 font-semibold px-8 py-3.5 rounded-xl">
+                    আমাদের কাজ দেখুন
+                </a>
+            </div>
+            <div class="flex items-center justify-center gap-6 mt-10 text-sm text-gray-400">
+                <div class="flex -space-x-2">
+                    <div class="w-9 h-9 rounded-full border-2 border-dark-800 bg-primary-700 flex items-center justify-center text-white text-xs">RK</div>
+                    <div class="w-9 h-9 rounded-full border-2 border-dark-800 bg-primary-700 flex items-center justify-center text-white text-xs">NA</div>
+                    <div class="w-9 h-9 rounded-full border-2 border-dark-800 bg-primary-700 flex items-center justify-center text-white text-xs">AH</div>
+                </div>
+                <span><span class="text-white font-semibold">১৫০+</span> ব্যবসার ওয়েবসাইট তৈরি</span>
+                <span class="hidden sm:inline">|</span>
+                <span class="hidden sm:inline"><i class="fas fa-star text-yellow-400"></i> ৪.৯/৫ রেটিং</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="py-20 px-4 sm:px-6 bg-dark-800">
+        <div class="container mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">আমাদের ওয়েব ডিজাইন সেবাসমূহ</h2>
+                <p class="text-gray-400 mt-4 text-lg">বাংলাদেশের এসএমই ব্যবসার চাহিদা অনুযায়ী ডিজাইন করা সম্পূর্ণ ওয়েব সলিউশন</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-dark-700/60 p-6 rounded-2xl border border-dark-600 card-hover">
+                    <div class="w-14 h-14 rounded-xl service-icon text-primary-400 flex items-center justify-center text-2xl mb-5"><i class="fas fa-globe"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">কর্পোরেট ওয়েবসাইট</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">আপনার ব্যবসার জন্য পেশাদার ৫-১০ পৃষ্ঠার ওয়েবসাইট। কোম্পানির পরিচয়, সেবা, ব্লগ ও যোগাযোগ পৃষ্ঠা সহ।</p>
+                </div>
+                <div class="bg-dark-700/60 p-6 rounded-2xl border border-dark-600 card-hover">
+                    <div class="w-14 h-14 rounded-xl service-icon text-primary-400 flex items-center justify-center text-2xl mb-5"><i class="fas fa-shopping-cart"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">ই-কমার্স ওয়েবসাইট</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">অনলাইন পণ্য বিক্রির জন্য সম্পূর্ণ ই-কমার্স সাইট। পেমেন্ট গেটওয়ে, প্রোডাক্ট ম্যানেজমেন্ট ও অর্ডার ট্র্যাকিং।</p>
+                </div>
+                <div class="bg-dark-700/60 p-6 rounded-2xl border border-dark-600 card-hover">
+                    <div class="w-14 h-14 rounded-xl service-icon text-primary-400 flex items-center justify-center text-2xl mb-5"><i class="fas fa-file-alt"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">ল্যান্ডিং পেজ ডিজাইন</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">ক্যাম্পেইন বা প্রোডাক্ট লঞ্চের জন্য উচ্চ-কনভার্টিং ল্যান্ডিং পেজ। কাস্টমার অ্যাকশন নিতে উৎসাহিত করে।</p>
+                </div>
+                <div class="bg-dark-700/60 p-6 rounded-2xl border border-dark-600 card-hover">
+                    <div class="w-14 h-14 rounded-xl service-icon text-primary-400 flex items-center justify-center text-2xl mb-5"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">রেস্পন্সিভ ডিজাইন</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">মোবাইল, ট্যাবলেট ও ডেস্কটপ—সব ডিভাইসে পারফেক্ট দেখায় এমন ওয়েবসাইট। মোবাইল ফার্স্ট অ্যাপ্রোচ।</p>
+                </div>
+                <div class="bg-dark-700/60 p-6 rounded-2xl border border-dark-600 card-hover">
+                    <div class="w-14 h-14 rounded-xl service-icon text-primary-400 flex items-center justify-center text-2xl mb-5"><i class="fas fa-paint-brush"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">কাস্টম ইউআই/ইউএক্স ডিজাইন</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">আপনার ব্র্যান্ডের সাথে মানানসই অনন্য ডিজাইন। ব্যবহারকারীর অভিজ্ঞতা (UX) উন্নত করতে বিশেষ নকশা।</p>
+                </div>
+                <div class="bg-dark-700/60 p-6 rounded-2xl border border-dark-600 card-hover">
+                    <div class="w-14 h-14 rounded-xl service-icon text-primary-400 flex items-center justify-center text-2xl mb-5"><i class="fas fa-sync-alt"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">ওয়েবসাইট রিডিজাইন</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">পুরনো ওয়েবসাইটকে আধুনিক, দ্রুত ও আকর্ষণীয় করে তোলা। ডিজাইন ও কার্যকারিতা সম্পূর্ণ উন্নত করা।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="py-16 px-4 sm:px-6 bg-dark-900">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-4xl text-primary-400 mb-3"><i class="fas fa-code"></i></div>
+                    <div class="text-2xl font-bold text-white">কাস্টম ডিজাইন</div>
+                    <p class="text-gray-400 text-sm mt-1">টেমপ্লেট নয়, প্রতিটি প্রজেক্ট আলাদা</p>
+                </div>
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-4xl text-primary-400 mb-3"><i class="fas fa-bolt"></i></div>
+                    <div class="text-2xl font-bold text-white">দ্রুত লোড</div>
+                    <p class="text-gray-400 text-sm mt-1">অপটিমাইজড কোড ও ফাস্ট হোস্টিং</p>
+                </div>
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-4xl text-primary-400 mb-3"><i class="fas fa-handshake"></i></div>
+                    <div class="text-2xl font-bold text-white">১০০% সন্তুষ্টি</div>
+                    <p class="text-gray-400 text-sm mt-1">ডেলিভারির পর অনুমোদন পর্যন্ত কাজ</p>
+                </div>
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-4xl text-primary-400 mb-3"><i class="fas fa-headset"></i></div>
+                    <div class="text-2xl font-bold text-white">সাপোর্ট</div>
+                    <p class="text-gray-400 text-sm mt-1">লঞ্চের পর ১ মাস ফ্রি সাপোর্ট</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PACKAGES (সমান উচ্চতা + আরও দেখুন) ===== -->
+    <section id="packages" class="py-20 px-4 sm:px-6 bg-dark-800">
+        <div class="container mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">আমাদের ওয়েব ডিজাইন প্যাকেজ</h2>
+                <p class="text-gray-400 mt-4 text-lg">আপনার ব্যবসার চাহিদা অনুযায়ী সঠিক প্যাকেজ বেছে নিন</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+
+                <!-- ল্যান্ডিং পেজ প্যাকেজ -->
+                <div class="package-card p-7 rounded-2xl border border-dark-600 card-hover relative">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-white">প্রোডাক্ট ল্যান্ডিং পেজ</h3>
+                        <div class="mt-2 flex items-baseline justify-center gap-1">
+                            <span class="text-4xl font-bold text-primary-400">৳৫,০০০</span>
+                            <span class="text-gray-400 text-sm">একবার</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-1">একটি প্রোডাক্টের জন্য আদর্শ</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="space-y-1 text-sm mb-4">
+                            <li><i class="fas fa-check mr-2"></i> ১ বছরের জন্য FREE .com ডোমেইন</li>
+                            <li><i class="fas fa-check mr-2"></i> 10GB ১ মাসের FREE হোস্টিং</li>
+                            <li><i class="fas fa-check mr-2"></i> ১টি হাই-কনভার্টিং ল্যান্ডিং পেজ</li>
+                            <li><i class="fas fa-check mr-2"></i> মোবাইল, ট্যাব ও ডেস্কটপ রেসপন্সিভ</li>
+                            <li><i class="fas fa-check mr-2"></i> স্পিড অপ্টিমাইজড ও SEO-ফ্রেন্ডলি</li>
+                            <li><i class="fas fa-check mr-2"></i> অর্ডার ফর্ম / Buy Now বাটন</li>
+                        </ul>
+                        <div class="extra-features" id="extra-landing">
+                            <ul class="space-y-1 text-sm mb-4">
+                                <li><i class="fas fa-check mr-2"></i> WhatsApp, Messenger ও ফোন কল বাটন</li>
+                                <li><i class="fas fa-check mr-2"></i> Facebook Pixel, GA & Search Console সেটআপ</li>
+                                <li><i class="fas fa-check mr-2"></i> SSL Certificate ও বেসিক সিকিউরিটি</li>
+                                <li><i class="fas fa-check mr-2"></i> ভিডিও বা ইমেজ গ্যালারি সেকশন</li>
+                                <li><i class="fas fa-check mr-2"></i> কাস্টমার রিভিউ ও FAQ সেকশন</li>
+                                <li><i class="fas fa-check mr-2"></i> ১টি প্রোডাক্ট আপলোড ও কনটেন্ট সেটআপ</li>
+                                <li><i class="fas fa-check mr-2"></i> ১ ঘণ্টার ভিডিও/লাইভ ট্রেনিং</li>
+                                <li><i class="fas fa-check mr-2"></i> ডোমেইন ও হোস্টিংয়ের সম্পূর্ণ কন্ট্রোল আপনার নামে</li>
+                                <li><i class="fas fa-check mr-2"></i> ৭ দিনের ফ্রি টেকনিক্যাল সাপোর্ট</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mb-4">
+                            <span class="feature-toggle" onclick="toggleExtra('extra-landing', this)">আরও দেখুন <i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="block w-full btn-outline text-primary-400 text-center font-semibold py-3 rounded-xl mt-auto">প্যাকেজ নিন</a>
+                </div>
+
+                <!-- ই-কমার্স বেসিক (জনপ্রিয়) -->
+                <div class="package-card p-7 rounded-2xl border-2 border-primary-500 card-hover relative transform md:scale-105 shadow-xl shadow-primary-600/10">
+                    <div class="absolute top-0 right-6 badge-popular text-white text-xs font-bold px-4 py-1.5 rounded-b-lg">জনপ্রিয়</div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-white">ই-কমার্স বেসিক</h3>
+                        <div class="mt-2 flex items-baseline justify-center gap-1">
+                            <span class="text-4xl font-bold text-primary-400">৳৮,০০০</span>
+                            <span class="text-gray-400 text-sm">একবার</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-1">ছোট অনলাইন স্টোরের জন্য</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="space-y-1 text-sm mb-4">
+                            <li><i class="fas fa-check mr-2"></i> ১ম বছরের জন্য .com ডোমেইন + 10GB ১ মাসের FREE হোস্টিং</li>
+                            <li><i class="fas fa-check mr-2"></i> ওয়েবসাইট ব্যবহারের জন্য সম্পূর্ণ ট্রেনিং</li>
+                            <li><i class="fas fa-check mr-2"></i> ডোমেইন ও হোস্টিংয়ের পূর্ণ কন্ট্রোল আপনার নামে</li>
+                            <li><i class="fas fa-check mr-2"></i> ব্র্যান্ডেবল ইমেইল (example@yourdomain.com)</li>
+                            <li><i class="fas fa-check mr-2"></i> মোবাইল ও SEO ফ্রেন্ডলি ডিজাইন</li>
+                            <li><i class="fas fa-check mr-2"></i> হোমপেজ, প্রোডাক্ট, কন্টাক্ট, অ্যাবাউট, শপিং কার্টসহ ৫ পেইজ</li>
+                        </ul>
+                        <div class="extra-features" id="extra-ecom">
+                            <ul class="space-y-1 text-sm mb-4">
+                                <li><i class="fas fa-check mr-2"></i> অর্ডার ম্যানেজমেন্ট ও ইনভেন্টরি সিস্টেম</li>
+                                <li><i class="fas fa-check mr-2"></i> SSL সার্টিফিকেট ও সাইট সিকিউরিটি</li>
+                                <li><i class="fas fa-check mr-2"></i> সোশ্যাল মিডিয়া লিঙ্ক এবং চেট ইন্টিগ্রেশন</li>
+                                <li><i class="fas fa-check mr-2"></i> প্রয়োজনে পেমেন্ট গেটওয়ে (বিকাশ/নগদ/কার্ড) সংযুক্তি</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mb-4">
+                            <span class="feature-toggle" onclick="toggleExtra('extra-ecom', this)">আরও দেখুন <i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="block w-full btn-primary text-white text-center font-semibold py-3 rounded-xl shadow-lg shadow-blue-600/30 mt-auto">প্যাকেজ নিন</a>
+                </div>
+
+                <!-- প্রিমিয়াম ই-কমার্স -->
+                <div class="package-card p-7 rounded-2xl border border-dark-600 card-hover relative">
+                    <div class="absolute top-0 right-6 badge-best text-white text-xs font-bold px-4 py-1.5 rounded-b-lg">সেরা মূল্য</div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-white">প্রিমিয়াম ই-কমার্স</h3>
+                        <div class="mt-2 flex items-baseline justify-center gap-1">
+                            <span class="text-4xl font-bold text-primary-400">৳৩০,০০০</span>
+                            <span class="text-gray-400 text-sm">একবার</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-1">পূর্ণাঙ্গ অনলাইন স্টোর</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="space-y-1 text-sm mb-4">
+                            <li><i class="fas fa-check mr-2"></i> ১ বছরের জন্য FREE .com ডোমেইন</li>
+                            <li><i class="fas fa-check mr-2"></i> ১ বছরের জন্য FREE 20GB NVMe হোস্টিং</li>
+                            <li><i class="fas fa-check mr-2"></i> ডোমেইন ও হোস্টিংয়ের সম্পূর্ণ মালিকানা আপনার নামে</li>
+                            <li><i class="fas fa-check mr-2"></i> সম্পূর্ণ প্রিমিয়াম ই-কমার্স ওয়েবসাইট ডিজাইন</li>
+                            <li><i class="fas fa-check mr-2"></i> সর্বোচ্চ ১০০টি প্রোডাক্ট আপলোড ও ক্যাটাগরি সেটআপ</li>
+                            <li><i class="fas fa-check mr-2"></i> আনলিমিটেড ক্যাটাগরি, ব্র্যান্ড ও অ্যাট্রিবিউট</li>
+                        </ul>
+                        <div class="extra-features" id="extra-premium">
+                            <ul class="space-y-1 text-sm mb-4">
+                                <li><i class="fas fa-check mr-2"></i> মোবাইল, ট্যাব ও ডেস্কটপ রেসপন্সিভ</li>
+                                <li><i class="fas fa-check mr-2"></i> SEO-ফ্রেন্ডলি ও দ্রুত লোডিং অপ্টিমাইজেশন</li>
+                                <li><i class="fas fa-check mr-2"></i> SSL Certificate ও অ্যাডভান্সড সিকিউরিটি</li>
+                                <li><i class="fas fa-check mr-2"></i> বিকাশ, নগদ, রকেট, SSLCommerz/SurjoPay পেমেন্ট গেটওয়ে</li>
+                                <li><i class="fas fa-check mr-2"></i> স্টেডফাস্ট, পেপারফ্লাই, রেডএক্স, পাঠাও কুরিয়ার ইন্টিগ্রেশন</li>
+                                <li><i class="fas fa-check mr-2"></i> ইনভেন্টরি ও স্টক ম্যানেজমেন্ট সিস্টেম</li>
+                                <li><i class="fas fa-check mr-2"></i> অর্ডার, ইনভয়েস ও কাস্টমার ম্যানেজমেন্ট</li>
+                                <li><i class="fas fa-check mr-2"></i> কুপন, ডিসকাউন্ট ও অফার সিস্টেম</li>
+                                <li><i class="fas fa-check mr-2"></i> Wishlist ও Product Comparison সুবিধা</li>
+                                <li><i class="fas fa-check mr-2"></i> Facebook Pixel, Google Analytics, Search Console</li>
+                                <li><i class="fas fa-check mr-2"></i> WhatsApp, Messenger, Live Chat ও Social Media</li>
+                                <li><i class="fas fa-check mr-2"></i> কাস্টম Contact Form, FAQ ও Customer Review</li>
+                                <li><i class="fas fa-check mr-2"></i> ব্র্যান্ডেড ইমেইল (info@yourdomain.com)</li>
+                                <li><i class="fas fa-check mr-2"></i> সম্পূর্ণ অ্যাডমিন প্যানেল ট্রেনিং (ভিডিও + লাইভ)</li>
+                                <li><i class="fas fa-check mr-2"></i> ৩০ দিনের ফ্রি টেকনিক্যাল সাপোর্ট</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mb-4">
+                            <span class="feature-toggle" onclick="toggleExtra('extra-premium', this)">আরও দেখুন <i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="block w-full btn-outline text-primary-400 text-center font-semibold py-3 rounded-xl mt-auto">প্যাকেজ নিন</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section id="portfolio" class="py-20 px-4 sm:px-6 bg-dark-900">
+        <div class="container mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">আমাদের তৈরি কিছু ওয়েবসাইট</h2>
+                <p class="text-gray-400 mt-4 text-lg">বাংলাদেশের বিভিন্ন ব্যবসার জন্য ডিজাইন করা ওয়েবসাইট</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 group">
+                    <div class="h-52 overflow-hidden bg-dark-700">
+                        <img src="https://img.freepik.com/free-vector/website-template-design_23-2148635208.jpg?w=740&t=st=1707000000~exp=1707000600~hmac=1234567890abcdef" alt="প্রকল্প ১" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-white font-semibold">কর্পোরেট ওয়েবসাইট</h4>
+                        <p class="text-gray-400 text-sm">একটি প্রতিষ্ঠানের জন্য পেশাদার ৫-পৃষ্ঠার সাইট</p>
+                    </div>
+                </div>
+                <div class="bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 group">
+                    <div class="h-52 overflow-hidden bg-dark-700">
+                        <img src="https://img.freepik.com/free-vector/ecommerce-website-concept_23-2148635208.jpg?w=740&t=st=1707000000~exp=1707000600~hmac=1234567890abcdef" alt="প্রকল্প ২" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-white font-semibold">ই-কমার্স সাইট</h4>
+                        <p class="text-gray-400 text-sm">অনলাইন পণ্য বিক্রির জন্য সম্পূর্ণ সাইট</p>
+                    </div>
+                </div>
+                <div class="bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 group">
+                    <div class="h-52 overflow-hidden bg-dark-700">
+                        <img src="https://img.freepik.com/free-vector/landing-page-design_23-2148635208.jpg?w=740&t=st=1707000000~exp=1707000600~hmac=1234567890abcdef" alt="প্রকল্প ৩" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-white font-semibold">ল্যান্ডিং পেজ</h4>
+                        <p class="text-gray-400 text-sm">সেবা বিপণনের জন্য উচ্চ-কনভার্টিং পেজ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#contact" class="btn-outline text-primary-400 font-semibold px-8 py-3 rounded-xl inline-block">আরও কাজ দেখতে চান? যোগাযোগ করুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS (ছবি বাদ, শুধু নাম) ===== -->
+    <section id="testimonials" class="py-20 px-4 sm:px-6 bg-dark-800">
+        <div class="container mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">আমাদের ক্লায়েন্টদের মতামত</h2>
+                <p class="text-gray-400 mt-4 text-lg">যারা আমাদের ওয়েব ডিজাইন সেবা নিয়েছেন</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="testimonial-card p-6 rounded-2xl">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-700 flex items-center justify-center text-white font-bold text-lg">আর</div>
+                        <div>
+                            <h4 class="text-white font-semibold">মো. রফিকুল ইসলাম</h4>
+                            <p class="text-primary-400 text-sm">রফিক ট্রেডার্স</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">"হেক্সন আইটির ডিজাইন টিম আমাদের জন্য একটি অসাধারণ কর্পোরেট ওয়েবসাইট তৈরি করেছে। ডিজাইন ছিল আধুনিক ও ব্যবহারকারী-বান্ধব।"</p>
+                    <div class="flex text-yellow-400 mt-3 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <div class="testimonial-card p-6 rounded-2xl">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-700 flex items-center justify-center text-white font-bold text-lg">না</div>
+                        <div>
+                            <h4 class="text-white font-semibold">নাসরিন আক্তার</h4>
+                            <p class="text-primary-400 text-sm">নাসরিন ফ্যাশন</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">"আমাদের ই-কমার্স ওয়েবসাইটটি খুব সুন্দর ও দ্রুত। কাস্টমাররা সহজেই অর্ডার করতে পারছে। বিক্রি অনেক বেড়েছে।"</p>
+                    <div class="flex text-yellow-400 mt-3 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <div class="testimonial-card p-6 rounded-2xl">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-700 flex items-center justify-center text-white font-bold text-lg">আ</div>
+                        <div>
+                            <h4 class="text-white font-semibold">আবুল হাসান</h4>
+                            <p class="text-primary-400 text-sm">হাসান ইলেকট্রনিক্স</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">"ল্যান্ডিং পেজটি আমাদের প্রোডাক্ট লঞ্চে অসাধারণ ফল দিয়েছে। ডিজাইনটি খুব আকর্ষণীয় এবং কনভার্সন রেট অনেক বেশি।"</p>
+                    <div class="flex text-yellow-400 mt-3 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="py-20 px-4 sm:px-6 bg-dark-900">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">সচরাচর জিজ্ঞাসা</h2>
+                <p class="text-gray-400 mt-4 text-lg">ওয়েব ডিজাইন সম্পর্কে আপনার প্রশ্নের উত্তর</p>
+            </div>
+            <div class="bg-dark-800/60 rounded-2xl border border-dark-700 divide-y divide-dark-700">
+                <div class="faq-item p-5">
+                    <h3 class="text-white font-semibold text-lg">ওয়েবসাইট ডিজাইন করতে কত সময় লাগে?</h3>
+                    <p class="text-gray-400 text-sm mt-2 leading-relaxed">৫-পৃষ্ঠার ওয়েবসাইট ডিজাইন ও ডেভেলপ করতে সাধারণত ৭-১০ কার্যদিবস সময় লাগে। প্রকল্পের জটিলতার উপর নির্ভর করে সময় পরিবর্তিত হতে পারে।</p>
+                </div>
+                <div class="faq-item p-5">
+                    <h3 class="text-white font-semibold text-lg">আমার কি নিজে কোনো কন্টেন্ট দিতে হবে?</h3>
+                    <p class="text-gray-400 text-sm mt-2 leading-relaxed">আমরা আপনার ব্যবসা সম্পর্কে বিস্তারিত জানতে চাই। আপনি ছবি ও প্রয়োজনীয় তথ্য দিলে বাকি কন্টেন্ট আমরা তৈরি করে দিই।</p>
+                </div>
+                <div class="faq-item p-5">
+                    <h3 class="text-white font-semibold text-lg">মোবাইলে কি ওয়েবসাইট ঠিকমতো কাজ করবে?</h3>
+                    <p class="text-gray-400 text-sm mt-2 leading-relaxed">হ্যাঁ, আমাদের প্রতিটি ওয়েবসাইট মোবাইল-ফার্স্ট পদ্ধতিতে ডিজাইন করা হয়। ফোন, ট্যাবলেট ও ডেস্কটপ—সব ডিভাইসে পারফেক্ট দেখায়।</p>
+                </div>
+                <div class="faq-item p-5">
+                    <h3 class="text-white font-semibold text-lg">ডেলিভারির পর সাপোর্ট পাবো?</h3>
+                    <p class="text-gray-400 text-sm mt-2 leading-relaxed">প্রতিটি প্যাকেজের সাথে নির্দিষ্ট সময়ের ফ্রি টেকনিক্যাল সাপোর্ট অন্তর্ভুক্ত রয়েছে। বিস্তারিত প্যাকেজ বিবরণে দেখুন।</p>
+                </div>
+                <div class="faq-item p-5">
+                    <h3 class="text-white font-semibold text-lg">হোস্টিং ও ডোমেইন কি দিয়ে থাকেন?</h3>
+                    <p class="text-gray-400 text-sm mt-2 leading-relaxed">আমাদের প্রতিটি প্যাকেজেই নির্দিষ্ট সময়ের জন্য ফ্রি ডোমেইন ও হোস্টিং দেওয়া হয়। প্যাকেজের বিস্তারিত দেখে নিন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT / CTA ===== -->
+    <section id="contact" class="py-20 px-4 sm:px-6 bg-dark-800 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary-600/10 blur-3xl rounded-full pointer-events-none"></div>
+        <div class="container mx-auto max-w-3xl relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">একটি আধুনিক ওয়েবসাইট চান?</h2>
+                <p class="text-gray-400 mt-4 text-lg">আজই আমাদের সাথে কথা বলুন। আমরা আপনার ব্যবসার জন্য সেরা ওয়েব ডিজাইন সলিউশন দেব</p>
+            </div>
+            <div class="bg-dark-700/60 backdrop-blur-sm p-8 sm:p-10 rounded-2xl border border-dark-600 shadow-2xl">
+  
+
+
+<form action="https://formsubmit.co/hexonitsolution@email.com" method="POST" class="space-y-5">
+
+    <!-- FormSubmit Settings -->
+    <input type="hidden" name="_subject" value="নতুন ওয়েবসাইট সার্ভিস ইনকোয়ারি">
+    <input type="hidden" name="_captcha" value="false">
+    <!-- চাইলে Success Page দিন -->
+    <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+            <label class="text-gray-300 text-sm font-medium block mb-1.5">আপনার নাম *</label>
+            <input
+                type="text"
+                name="নাম"
+                required
+                class="w-full bg-dark-800 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition"
+                placeholder="মো. রফিকুল ইসলাম">
+        </div>
+
+        <div>
+            <label class="text-gray-300 text-sm font-medium block mb-1.5">ফোন নম্বর *</label>
+            <input
+                type="tel"
+                name="ফোন নম্বর"
+                required
+                class="w-full bg-dark-800 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition"
+                placeholder="০১৭XXXXXXXX">
+        </div>
+    </div>
+
+    <div>
+        <label class="text-gray-300 text-sm font-medium block mb-1.5">ইমেইল ঠিকানা</label>
+        <input
+            type="email"
+            name="ইমেইল"
+            class="w-full bg-dark-800 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition"
+            placeholder="your@email.com">
+    </div>
+
+    <div>
+        <label class="text-gray-300 text-sm font-medium block mb-1.5">আপনার প্রয়োজনীয়তা</label>
+        <textarea
+            rows="4"
+            name="বার্তা"
+            class="w-full bg-dark-800 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition"
+            placeholder="আপনি কী ধরনের ওয়েবসাইট চান? আপনার ব্যবসার ধরন ও বিশেষ চাহিদা জানান..."></textarea>
+    </div>
+
+    <button
+        type="submit"
+        class="w-full btn-primary text-white font-bold py-4 rounded-xl text-lg shadow-lg shadow-blue-600/30">
+        <i class="fas fa-paper-plane mr-2"></i>
+        ফ্রি কনসালটেশন বুক করুন
+    </button>
+
+    <p class="text-center text-gray-500 text-xs mt-3">
+        আমরা ২৪ ঘন্টার মধ্যে আপনার সাথে যোগাযোগ করব
+    </p>
+
+</form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark-800 border-t border-dark-700 py-12 px-4 sm:px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white flex items-center gap-2">
+                        <span class="text-primary-400"><i class="fas fa-code"></i></span>
+                        <span class="text-primary-400">হেক্সন</span><span>আইটি</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mt-3 leading-relaxed">বাংলাদেশের এসএমই ব্যবসার জন্য পেশাদার ওয়েবসাইট ডিজাইন সেবা। আধুনিক, দ্রুত ও রেস্পন্সিভ ডিজাইন।</p>
+                    <div class="flex gap-4 mt-5">
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition text-lg"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition text-lg"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition text-lg"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition text-lg"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">সেবাসমূহ</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-primary-400 transition">কর্পোরেট ওয়েবসাইট</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary-400 transition">ই-কমার্স সাইট</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary-400 transition">ল্যান্ডিং পেজ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary-400 transition">রেস্পন্সিভ ডিজাইন</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">কুইক লিংক</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#packages" class="text-gray-400 hover:text-primary-400 transition">প্যাকেজ</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-primary-400 transition">পোর্টফোলিও</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-primary-400 transition">ক্লায়েন্ট রিভিউ</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-primary-400 transition">প্রশ্নোত্তর</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">যোগাযোগ</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-400">
+                        <li><i class="fas fa-phone text-primary-400 w-5"></i> +৮৮০ ১৯১৪ ২৩২৫০০</li>
+                        <li><i class="fas fa-envelope text-primary-400 w-5"></i> hexonitsolution@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt text-primary-400 w-5"></i> ঢাকা, বাংলাদেশ</li>
+                        <li><i class="fas fa-clock text-primary-400 w-5"></i> শনি-বৃহস্পতি: ১০AM-৮PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-dark-700 mt-10 pt-6 text-center text-gray-500 text-sm">
+                &copy; ২০২৫ হেক্সন আইটি। সর্বস্বত্ব সংরক্ষিত।
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Mobile menu toggle
+        const toggleBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        toggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            toggleBtn.innerHTML = mobileMenu.classList.contains('open') ?
+                '<i class="fas fa-times"></i>' :
+                '<i class="fas fa-bars"></i>';
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Close mobile menu on outside click
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('open') &&
+                !mobileMenu.contains(e.target) &&
+                !toggleBtn.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+                toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // ===== আরও দেখুন টগল =====
+        function toggleExtra(id, el) {
+            const extra = document.getElementById(id);
+            extra.classList.toggle('open');
+            if (extra.classList.contains('open')) {
+                el.innerHTML = 'সংক্ষেপে দেখুন <i class="fas fa-chevron-up"></i>';
+            } else {
+                el.innerHTML = 'আরও দেখুন <i class="fas fa-chevron-down"></i>';
+            }
+        }
+    </script>
+</body>
+</html>
