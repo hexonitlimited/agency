@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ধন্যবাদ | হেক্সন আইটি</title>
+    <meta name="description" content="আপনার আগ্রহের জন্য ধন্যবাদ। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe',
+                            300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6',
+                            600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a',
+                        },
+                        dark: { 900: '#0A0F1F', 800: '#111827', 700: '#1F2937', 600: '#374151' }
+                    },
+                    fontFamily: { sans: ['Hind Siliguri', 'Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0A0F1F 0%, #111827 50%, #1e3a8a 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px -8px #2563eb;
+        }
+        .btn-outline {
+            border: 2px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: #3b82f6;
+            color: #fff;
+        }
+        .thankyou-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.05));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 3.5rem;
+            color: #60a5fa;
+            border: 2px solid rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-300 font-sans antialiased">
+
+    <!-- ===== NAVIGATION (সেম) ===== -->
+    <nav class="bg-dark-800/90 backdrop-blur-md border-b border-dark-700 sticky top-0 z-50 px-4 sm:px-6 py-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white flex items-center gap-2">
+                <span class="text-primary-500"><i class="fas fa-code"></i></span>
+                <span class="text-primary-400">হেক্সন</span><span class="text-white">আইটি</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium">
+                <a href="index.html#services" class="hover:text-primary-400 transition">সেবাসমূহ</a>
+                <a href="index.html#packages" class="hover:text-primary-400 transition">প্যাকেজ</a>
+                <a href="index.html#portfolio" class="hover:text-primary-400 transition">পোর্টফোলিও</a>
+                <a href="index.html#testimonials" class="hover:text-primary-400 transition">ক্লায়েন্ট</a>
+                <a href="index.html#faq" class="hover:text-primary-400 transition">প্রশ্ন</a>
+                <a href="index.html#contact" class="btn-primary text-white px-5 py-2 rounded-lg font-semibold text-sm">ফ্রি কনসালটেশন</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-400 hover:text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-dark-800 px-4 pb-5 mt-2 rounded-b-xl border-b border-dark-700">
+            <div class="flex flex-col space-y-3 text-sm font-medium">
+                <a href="index.html#services" class="hover:text-primary-400 py-2 transition">সেবাসমূহ</a>
+                <a href="index.html#packages" class="hover:text-primary-400 py-2 transition">প্যাকেজ</a>
+                <a href="index.html#portfolio" class="hover:text-primary-400 py-2 transition">পোর্টফোলিও</a>
+                <a href="index.html#testimonials" class="hover:text-primary-400 py-2 transition">ক্লায়েন্ট</a>
+                <a href="index.html#faq" class="hover:text-primary-400 py-2 transition">প্রশ্ন</a>
+                <a href="index.html#contact" class="btn-primary text-white text-center py-2.5 rounded-lg font-semibold">ফ্রি কনসালটেশন</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== THANK YOU PAGE ===== -->
+    <section class="gradient-bg relative overflow-hidden min-h-[70vh] flex items-center justify-center px-4 sm:px-6 py-20">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-900/20 to-transparent pointer-events-none"></div>
+        <div class="container mx-auto relative z-10 text-center max-w-3xl">
+            <!-- আইকন -->
+            <div class="thankyou-icon mb-8">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            
+            <!-- শিরোনাম -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
+                ধন্যবাদ!
+            </h1>
+            
+            <!-- সাবটাইটেল -->
+            <p class="text-xl sm:text-2xl text-primary-400 font-semibold mb-6">
+                আপনার আগ্রহের জন্য আমরা কৃতজ্ঞ
+            </p>
+            
+            <!-- বিস্তারিত -->
+            <div class="bg-dark-800/60 backdrop-blur-sm rounded-2xl border border-dark-600 p-6 sm:p-8 mb-8">
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    আপনার তথ্য সফলভাবে জমা হয়েছে। আমাদের টিম খুব শীঘ্রই (২৪ ঘন্টার মধ্যে) আপনার সাথে যোগাযোগ করবে।
+                </p>
+                <div class="flex items-center justify-center gap-4 mt-4 text-sm text-gray-400">
+                    <span><i class="fas fa-phone text-primary-400"></i> +৮৮০ ১৯১৪ ২৩২৫০০</span>
+                    <span>|</span>
+                    <span><i class="fas fa-envelope text-primary-400"></i> hexonitsolution@gmail.com</span>
+                </div>
+            </div>
+            
+            <!-- কী করবেন -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div class="bg-dark-700/40 p-4 rounded-xl border border-dark-600">
+                    <i class="fas fa-clock text-primary-400 text-2xl mb-2"></i>
+                    <p class="text-gray-300 text-sm">আমরা ২৪ ঘন্টার মধ্যে কল করব</p>
+                </div>
+                <div class="bg-dark-700/40 p-4 rounded-xl border border-dark-600">
+                    <i class="fas fa-whatsapp text-green-400 text-2xl mb-2"></i>
+                    <p class="text-gray-300 text-sm">WhatsApp: +৮৮০ ১৯১৪ ২৩২৫০০</p>
+                </div>
+            </div>
+            
+            <!-- বাটন -->
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="index.html" class="btn-primary text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg shadow-blue-600/25">
+                    <i class="fas fa-home mr-2"></i> হোম পেজে ফিরুন
+                </a>
+                <a href="index.html#packages" class="btn-outline text-primary-400 font-semibold px-8 py-3.5 rounded-xl">
+                    প্যাকেজ দেখুন
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (সেম) ===== -->
+    <footer class="bg-dark-800 border-t border-dark-700 py-12 px-4 sm:px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-white flex items-center gap-2">
+                        <span class="text-primary-400"><i class="fas fa-code"></i></span>
+                        <span class="text-primary-400">হেক্সন</span><span>আইটি</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mt-3 leading-relaxed">বাংলাদেশের এসএমই ব্যবসার জন্য পেশাদার ওয়েবসাইট ডিজাইন সেবা। আধুনিক, দ্রুত ও রেস্পন্সিভ ডিজাইন।</p>
+                    <div class="flex gap-4 mt-5">
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition text-lg"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition text-lg"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition text-lg"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition text-lg"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">সেবাসমূহ</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary-400 transition">কর্পোরেট ওয়েবসাইট</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary-400 transition">ই-কমার্স সাইট</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary-400 transition">ল্যান্ডিং পেজ</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary-400 transition">রেস্পন্সিভ ডিজাইন</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">কুইক লিংক</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html#packages" class="text-gray-400 hover:text-primary-400 transition">প্যাকেজ</a></li>
+                        <li><a href="index.html#portfolio" class="text-gray-400 hover:text-primary-400 transition">পোর্টফোলিও</a></li>
+                        <li><a href="index.html#testimonials" class="text-gray-400 hover:text-primary-400 transition">ক্লায়েন্ট রিভিউ</a></li>
+                        <li><a href="index.html#faq" class="text-gray-400 hover:text-primary-400 transition">প্রশ্নোত্তর</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">যোগাযোগ</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-400">
+                        <li><i class="fas fa-phone text-primary-400 w-5"></i> +৮৮০ ১৯১৪ ২৩২৫০০</li>
+                        <li><i class="fas fa-envelope text-primary-400 w-5"></i> hexonitsolution@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt text-primary-400 w-5"></i> ঢাকা, বাংলাদেশ</li>
+                        <li><i class="fas fa-clock text-primary-400 w-5"></i> শনি-বৃহস্পতি: ১০AM-৮PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-dark-700 mt-10 pt-6 text-center text-gray-500 text-sm">
+                &copy; ২০২৫ হেক্সন আইটি। সর্বস্বত্ব সংরক্ষিত।
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS (সেম) ===== -->
+    <style>
+        .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease-in-out; }
+        .mobile-menu.open { max-height: 500px; }
+    </style>
+    <script>
+        // Mobile menu toggle
+        const toggleBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        toggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            toggleBtn.innerHTML = mobileMenu.classList.contains('open') ?
+                '<i class="fas fa-times"></i>' :
+                '<i class="fas fa-bars"></i>';
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('open') &&
+                !mobileMenu.contains(e.target) &&
+                !toggleBtn.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+                toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    </script>
+
+</body>
+</html>
